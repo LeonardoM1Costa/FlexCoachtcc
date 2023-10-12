@@ -1,15 +1,15 @@
 import { StyleSheet, Text, View, TouchableOpacity } from "react-native";
-import Header from "./components/Header";
+import Header from "../components/Header";
 import {
   RoundedView,
   Title,
   Ststext,
   Stspessoal,
   Ststext2,
-} from "./styles/StyleGeral";
+} from "../styles/StyleGeral";
 import { FontAwesome5 } from "@expo/vector-icons";
 
-export default function Geral() {
+export default function Geral({ navigation }) {
   return (
     <View style={styles.container}>
       <Header />
@@ -34,17 +34,6 @@ export default function Geral() {
           <Ststext2>Avaliações</Ststext2>
         </View>
       </Stspessoal>
-      <View style={styles.tabBar}>
-        <TouchableOpacity style={styles.tabItem}>
-          <Text style={styles.tabText}>Item 1</Text>
-        </TouchableOpacity>
-        <TouchableOpacity style={styles.tabItem}>
-          <Text style={styles.tabText}>Item 2</Text>
-        </TouchableOpacity>
-        <TouchableOpacity style={styles.tabItem}>
-          <Text style={styles.tabText}>Item 3</Text>
-        </TouchableOpacity>
-      </View>
     </View>
   );
 }
